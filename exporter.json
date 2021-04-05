@@ -1,0 +1,23 @@
+{
+    "id": "io.supernova.ios-localization",
+    "name": "iOS Localization",
+    "description": "Provides automatic export of text tokens defined in your design system library to format consumable by iOS localization engine.",
+    "author": "Jiri Trecak",
+    "organization": "Supernova",
+    "homepage": "https://supernova.io",
+    "source_dir": "src",
+    "version": "1.0.0",
+    "config": {
+        "sources": "sources.json",
+        "output": "output.json"
+    },
+    "engines": {
+        "pulsar": "1.0.0",
+        "supernova": "1.0.0"
+    },
+    "tags": [
+        "iOS",
+        "Localization",
+        "i18n"
+    ]
+}
