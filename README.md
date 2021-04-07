@@ -7,31 +7,36 @@
 # iOS Localization Exporter
 
 
-The iOS Localization Exporter allows you to **produce production-ready localization files for text texts/label defined inside your design system**. This way, you can define your localization strings in design time, and have them immediately available in code.
+The iOS Localization Exporter allows you to **produce production-ready localization files for texts/label defined inside your design system**. This way, you can define your localization strings in design time, and have them immediately available in code.
 
 You can generate all production ready-code either manually using Supernova's [VS Code extension](https://marketplace.visualstudio.com/items?itemName=SupernovaIO.pulsar-vsc-extension), or automate your code delivery pipeline using Supernova [Design Continuous Delivery](https://supernova.io/automated-code-delivery).
 
 
 ## Example Usage
 
-Once you have run the exporter against your design system, you can start using the code in your codebase right away. Here are a few examples of how you can use the output of the localization exporter:
-
-### [Example 1]
-
-[Todo description]
+Once you have run the exporter against your design system, you can start using the code in your codebase right away. The exporter produces one file, `Localization.strings`, that you can point towards any folder you want. The exporter produces localization strings that follow your structure of the token groups:
 
 ```
-[Code]
+
+/* Welcome Screen */
+
+/* Use this everywhere user creates a new account */
+"welcomeScreen.signIn" = "Please Sign In";
+
+/* No description */
+"welcomeScreen.signOut" = "Sign Out from the application";
+
+/* No description */
+"welcomeScreen.forgotPassword" = "Did you forget your password?";
+
 ```
 
-
-### [Example 2]
-
-[Todo description]
+You can use the localization key to access its content using `NSLocalizedString` macro, using both Swift and ObjC:
 
 ```
-Code
+NSLocalizedString("welcomeScreen.signIn", comment: "") // Please Sign In
 ```
+
 
 ## Installing
 
