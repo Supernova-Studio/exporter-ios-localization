@@ -4,11 +4,9 @@
 Pulsar.registerFunction("localizationKey", function (token, tokenGroup, includeGroupPrefix) {
 
     // Create array with all path segments and token name at the end
-    console.log(`token group: ${JSON.stringify(tokenGroup.path)}`)
     let segments = [token.name]
     if (includeGroupPrefix) {
         segments = [...tokenGroup.path, tokenGroup.name, token.name]
-        console.log(`segments: ${segments}`)
     }
 
     // Create camelcased string from each segment
