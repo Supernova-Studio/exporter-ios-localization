@@ -1,0 +1,24 @@
+{*
+
+Generate all base localization strings. 
+Localization strings are grouped by the groups defined inside design system.
+
+*}
+{[ let localizationGroups = @ds.tokenGroupsOfType("Text") /]}
+{[ for group in localizationGroups ]}
+{[ let tokens = @ds.tokensByGroupId(group.id) /]}
+
+{* Include group path name *}
+/* {{ group.path.append(group.name).join(" / ") }} */
+{[ for text in tokens ]}
+
+{* Include localization comments, if needed *}
+{[ if behavior.includeDescriptions ]}
+/* {{ text.description }} */
+{[/]}
+{* Generate the localization key/value pair for each entry *}
+{[ let localizationKey = @js.localizationKey(text, group, behavior.includeGroupPrefixes) /]}
+"{{ text.name }}" = "{{ text.value.text }}";
+{[/]}
+
+{[/]}

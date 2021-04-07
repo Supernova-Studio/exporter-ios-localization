@@ -1,8 +1,8 @@
 {
     "blueprints": [
         {
-            "invoke": "colors.pr",
-            "write_to": "styles/colors.css"
+            "invoke": "base-localizations.pr",
+            "write_to": "Localizable.strings"
         }
     ]
 }

@@ -1,0 +1,24 @@
+
+
+/* Welcome Screen */
+
+/* Use this everywhere user creates a new account */
+"signIn" = "Please Sign In";
+
+/*  */
+"signOut" = "Sign Out from the application";
+
+/*  */
+"forgotPassword" = "Did you forget your password?";
+
+
+/* Sign Up */
+
+/*  */
+"signUp" = "Sign up to the application";
+
+/*  */
+"createUser" = "Create New User";
+
+
+/* Text */
