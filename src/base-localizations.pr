@@ -5,11 +5,11 @@ Localization strings are grouped by the groups defined inside design system.
 Use javascript configuration in helpers.js to change how the resulting file looks like
 
 *}
-{[ let localizationGroups = @ds.tokenGroupsOfType("Text") /]}
+{[ let localizationGroups = ds.tokenGroupsOfType("Text") /]}
 {[ for group in localizationGroups ]}
 {* Exclude groups if they are empty *}
-{[ if @compare.greaterThan(group.tokenIds.count(), 0) ]}
-{[ let tokens = @ds.tokensByGroupId(group.id) /]}
+{[ if (group.tokenIds.count() > 0) ]}
+{[ let tokens = ds.tokensByGroupId(group.id) /]}
 
 {* Include group path name *}
 /* {{ group.path.append(group.name).join(" / ") }} */
@@ -17,10 +17,10 @@ Use javascript configuration in helpers.js to change how the resulting file look
 
 {* Include localization comments, if needed *}
 {[ if behavior.includeDescriptions ]}
-/* {{ @boolean.ternaryValue(@compare.greaterThan(text.description.count(), 0), text.description, "No description") }} */
+/* {{ (text.description && text.description.count() > 0) ? text.description : "No Description" }} */
 {[/]}
 {* Generate the localization key/value pair for each entry *}
-{[ let localizationKey = @js.localizationKey(text, group, behavior.includeGroupPrefixes) /]}
+{[ let localizationKey = localizationKey(text, group, behavior.includeGroupPrefixes) /]}
 "{{ localizationKey }}" = "{{ text.value.text }}";
 {[/]}
 {[/]}
