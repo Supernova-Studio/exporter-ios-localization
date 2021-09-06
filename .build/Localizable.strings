@@ -1,24 +1,21 @@
 
 
-/* Welcome Screen */
+/* Welcome Page */
 
-/* Use this everywhere user creates a new account */
-"signIn" = "Please Sign In";
+/* Use that as the boldest message */
+"welcomePage.header" = "Hell yeah!";
 
-/*  */
-"signOut" = "Sign Out from the application";
-
-/*  */
-"forgotPassword" = "Did you forget your password?";
+/* Slightly smaller message */
+"welcomePage.subheader" = "Hell naw!";
 
 
-/* Sign Up */
+/* Sign Up Page */
 
-/*  */
-"signUp" = "Sign up to the application";
+/* No Description */
+"signUpPage.signUp" = "Sign Up";
 
-/*  */
-"createUser" = "Create New User";
+/* No Description */
+"signUpPage.forgotPassword" = "Forgot password? Click Here";
 
-
-/* Text */
+/* No Description */
+"signUpPage.signIn" = "Sign In";
