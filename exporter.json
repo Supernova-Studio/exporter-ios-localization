@@ -7,6 +7,7 @@
     "homepage": "https://supernova.io",
     "source_dir": "src",
     "version": "1.1",
+    "usesBrands": true,
     "config": {
         "sources": "sources.json",
         "output": "output.json",

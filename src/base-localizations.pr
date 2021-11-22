@@ -5,7 +5,8 @@ Localization strings are grouped by the groups defined inside design system.
 Use javascript configuration in helpers.js to change how the resulting file looks like
 
 *}
-{[ let localizationGroups = ds.tokenGroupsOfType("Text") /]}
+{[ let brand = ds.currentBrand() /]}
+{[ let localizationGroups = ds.tokenGroupsOfType("Text", brand.id) /]}
 {[ for group in localizationGroups ]}
 {* Exclude groups if they are empty *}
 {[ if (group.tokenIds.count() > 0) ]}
